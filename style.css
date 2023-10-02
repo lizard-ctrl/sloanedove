@@ -215,7 +215,7 @@ background-color: hotpink;
 
   #workContent, #nameContent, #workeContent, #resumeContent, #aboutContent{
     position: absolute;
-    top: 4%;
+    top: 6%;
     left: 10%;
     width: 72%;
     height: 80%;
