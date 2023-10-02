@@ -1,8 +1,24 @@
+body{
+    font-family: 'Almendra', serif;
+font-family: 'Pixelify Sans', cursive;
+}
+
 .images {
     text-align: center;
   }
   .images img {
     width: 100px;
+  }
+
+  
+  .imagess img {
+    width: 100px;
+    height: 50px;
+  }
+
+  .imagesss img {
+    width: 50%;
+    height: 100%;
   }
   
   .imagesDesktop img {
@@ -10,11 +26,14 @@
   }
   
   .images p {
-    background-color: darkmagenta;
     display: inline-block;
     padding: 2%;
     margin-top: 5px;
     font-size: 12pt;
+  }
+
+  #worke{
+    display: none;
   }
   
   
@@ -23,6 +42,7 @@
     top: 5%;
     left: 5%;
   }
+  
   
   .image-container {
     display: flex;
@@ -46,7 +66,6 @@
     top: 20%;
     height: auto;
     width: 70%;
-    overflow: scroll;
   }
   
   #nameTab, #aboutTab, #workTab, #resumeTab, #workeTab{
@@ -117,6 +136,8 @@
   .drawh {
     width: 70%;
     height: 70%;
+    margin-left: auto;
+    margin-right: auto;
     object-fit: contain;
   }
   
@@ -136,14 +157,56 @@
   .gameText{
     background-color: rgba(220, 78, 220);
     box-shadow: 0px 0px 35px 35px rgb(220, 78, 220); 
-    width: fit-content;
+    width: 40%;
     position: relative;
-    left: 40%;
+    margin-left: auto;
+    left: 5%;
+    margin-right: auto;
     text-align: center;
   }
   
-  #gameDes{
-    left: 25%;
-    width: 60%;
+  
+ 
+
+  .navIcon{
+    background-color: rgba(220, 78, 220);
+    box-shadow: 0px 0px 15px 15px rgb(220, 78, 220); 
+   
+    height: fit-content;
+    width: fit-content;
+  }
+
+
+  @media only screen and (max-device-width: 2000px) {
+   body{
+    background-color: red;
+   }
+
+   .image-container{
+    display: none;
+   }
+
+   #navbar{
+    position: absolute;
+    top: 5%;
+    left: 40%;
+  }
+
+  #workContent, #nameContent, #workeContent, #resumeContent, #aboutContent{
+  
     
+    position: absolute;
+    top: 8%;
+    left: 6%;
+    width: 82%;
+    height: 80%;
+    padding: 3%;
+    background-color: rgb(220, 78, 220);
+    box-shadow: 0px 0px 35px 35px rgb(220, 78, 220); 
+    overflow: scroll;
+}
+  
+ 
+  
+
   }
