@@ -193,6 +193,7 @@ background-color: hotpink;
    body{
         background-image: url("images/glitter-butterfly.gif");
         background-repeat: repeat;
+        background-color: white;
    }
 
    .image-container{
