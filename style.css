@@ -1,7 +1,7 @@
 body{
     font-family: 'Almendra', serif;
 font-family: 'Pixelify Sans', cursive;
-background-color: hotpink;
+background-color: white;
 }
 
 .images {
@@ -191,8 +191,6 @@ background-color: hotpink;
 
   @media only screen and (max-device-width: 500px) {
    body{
-        background-image: url("images/glitter-butterfly.gif");
-        background-repeat: repeat;
         background-color: white;
    }
 
