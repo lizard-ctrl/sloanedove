@@ -2,17 +2,23 @@ const images = document.querySelectorAll(".popup-image");
 const popup = document.getElementById("popup");
 const popupImage = document.getElementById("popup-image");
 
+// Define the maximum range for the popup position
+const maxX = window.innerWidth - 900; // Adjust 700 based on the width of the popup
+const maxY = window.innerHeight - 700; // Adjust 700 based on the height of the popup
+
 images.forEach((image) => {
     image.addEventListener("click", () => {
         // Set the source of the popup image to the clicked image
         popupImage.src = image.src;
         
-        // Calculate random positions for the popup
-        const randomX = Math.random() * (window.innerWidth - 400);
-        const randomY = Math.random() * (window.innerHeight - 400);
+        // Calculate random positions for the popup within the defined range
+        const randomX = Math.random() * (maxX - 500) + 300;
+        const randomY = Math.random() * (maxY - 100) + 100;
+
+        const adjustedX = Math.max(-200, randomX);
 
         // Set the position of the popup
-        popup.style.left = `${randomX}px`;
+        popup.style.left = `${adjustedX}px`;
         popup.style.top = `${randomY}px`;
 
         // Display the popup
@@ -24,6 +30,7 @@ popup.addEventListener("click", () => {
     // Hide the popup when clicked
     popup.classList.remove("active");
 });
+
 
 function name() {
     var x = document.getElementById("nameTab");
