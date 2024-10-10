@@ -357,6 +357,18 @@ background-repeat: repeat;
    
     
   }
+ 
+
+  .slideshow-container {
+    position: relative;
+    left: 0%;
+    max-width: 270px;
+    height: 200px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ccc;
+  }
+ 
   
 
   }
