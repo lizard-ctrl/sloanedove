@@ -3,8 +3,8 @@ const popup = document.getElementById("popup");
 const popupImage = document.getElementById("popup-image");
 
 // Define the maximum range for the popup position
-const maxX = window.innerWidth - 900; // Adjust 700 based on the width of the popup
-const maxY = window.innerHeight - 700; // Adjust 700 based on the height of the popup
+const maxX = window.innerWidth - 700; // Adjust 700 based on the width of the popup
+const maxY = window.innerHeight - 500; // Adjust 700 based on the height of the popup
 
 images.forEach((image) => {
     image.addEventListener("click", () => {
@@ -12,7 +12,7 @@ images.forEach((image) => {
         popupImage.src = image.src;
         
         // Calculate random positions for the popup within the defined range
-        const randomX = Math.random() * (maxX - 500) + 300;
+        const randomX = Math.random() * (maxX - 100) + 300;
         const randomY = Math.random() * (maxY - 100) + 100;
 
         const adjustedX = Math.max(-200, randomX);
@@ -157,4 +157,31 @@ function name() {
       b.style.display = "none";
     }
   }
+
+
+  let currentSlideIndex = 0;
+showSlide(currentSlideIndex);
+
+function changeSlide(n) {
+  showSlide(currentSlideIndex += n);
+}
+
+function showSlide(n) {
+  let slides = document.getElementsByClassName("slide");
+
+  if (n >= slides.length) {
+    currentSlideIndex = 0; // Wrap to the first slide if we go past the last one
+  }
+  if (n < 0) {
+    currentSlideIndex = slides.length - 1; // Wrap to the last slide if we go past the first one
+  }
+
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  // Show the current slide
+  slides[currentSlideIndex].style.display = "block";
+}
 
