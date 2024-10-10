@@ -185,10 +185,15 @@ background-color: white;
   }
   
   .spacer {
-    display: block; 
-    margin-bottom: 100px; 
+    z-index: -1000;
+    
+    position: relative;
+    width: 100%;
+    height: 7%;
+    
   }
  
+  
 
   .navIcon{
     background-color: rgba(220, 78, 220);
@@ -273,7 +278,7 @@ background-repeat: repeat;
     position: relative;
     left: 2%;
     width: 100%;
-    height: 100%;
+    height: 50%;
     object-fit: contain;
   }
 
@@ -290,7 +295,7 @@ background-repeat: repeat;
 }
 .gameText{
     background-color: rgba(220, 78, 220);
-    box-shadow: 0px 0px 35px 35px rgb(220, 78, 220); 
+    box-shadow: none;
     width: 40%;
     position: relative;
     margin-left: auto;
@@ -329,19 +334,29 @@ background-repeat: repeat;
   .imagesss img {
     width: 100%;
     height: 50%;
-  }
+  } 
 
   .gameText{
     background-color: rgba(220, 78, 220);
-    box-shadow: 0px 0px 35px 35px rgb(220, 78, 220); 
+    box-shadow: none;
     width: 80%;
   }
+
   .drawh {
     width: 100%;
-    height: 100%;
+    height: 60%;
+    
     object-fit: contain;
   }
   
+  .spacer {
+  z-index: -100;
+    position: relative;
+    width: 100%;
+    height: 5%;
+   
+    
+  }
   
 
   }
